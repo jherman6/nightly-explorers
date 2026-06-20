@@ -21,6 +21,14 @@ export function FinalScene() {
         </filter>
       </defs>
 
+      {/* distant mountain range */}
+      <path
+        d="M0,220 L0,180 L130,110 L260,170 L400,80 L540,160 L680,100 L820,170 L960,90 L1100,160 L1240,110 L1380,170 L1600,130 L1600,220 Z"
+        fill="#22404A"
+        opacity="0.4"
+      />
+      <polygon points="935,118 960,90 988,120" fill="#EDEFE6" opacity="0.45" />
+
       <path
         d="M0,260 Q300,200 620,250 T1100,220 T1600,260 L1600,500 L0,500 Z"
         fill="#173821"
@@ -35,23 +43,34 @@ export function FinalScene() {
         <ellipse cx="974" cy="240" rx="32" ry="22" />
         <ellipse cx="1014" cy="226" rx="22" ry="15" />
       </g>
-      <circle cx="800" cy="155" r="120" fill="url(#warmHalo2)" />
-      <g transform="translate(664,90) scale(1.6)" fill="#0D2A16">
-        <rect x="0" y="60" width="170" height="90" />
-        <rect x="-26" y="20" width="40" height="130" />
-        <rect x="156" y="20" width="40" height="130" />
-        <rect x="60" y="-30" width="50" height="180" />
-        <polygon points="-26,20 -6,-14 14,20" />
-        <polygon points="156,20 176,-14 196,20" />
-        <polygon points="60,-30 85,-66 110,-30" />
+      <circle cx="800" cy="170" r="140" fill="url(#warmHalo2)" />
+
+      {/* castle silhouette — same grander design as the hero scene, scaled down */}
+      <g transform="translate(728,115) scale(0.85)" fill="#0D2A16">
+        <rect x="-108" y="100" width="386" height="50" />
+        <rect x="-108" y="80" width="20" height="70" />
+        <polygon points="-108,80 -98,55 -88,80" />
+        <rect x="258" y="80" width="20" height="70" />
+        <polygon points="258,80 268,55 278,80" />
+        <rect x="-95" y="45" width="40" height="105" />
+        <polygon points="-95,45 -75,5 -55,45" />
+        <rect x="205" y="45" width="40" height="105" />
+        <polygon points="205,45 225,5 245,45" />
+        <rect x="-38" y="5" width="48" height="145" />
+        <polygon points="-38,5 -14,-45 10,5" />
+        <rect x="134" y="5" width="48" height="145" />
+        <polygon points="134,5 158,-45 182,5" />
+        <rect x="32" y="-35" width="80" height="185" />
+        <polygon points="32,-35 72,-105 112,-35" />
         <g fill="#C47B1F" opacity="0.9">
-          <rect x="6" y="64" width="7" height="11" />
-          <rect x="38" y="64" width="7" height="11" />
-          <rect x="124" y="64" width="7" height="11" />
-          <rect x="156" y="64" width="7" height="11" />
-          <rect x="79" y="10" width="8" height="13" />
+          <rect x="-88" y="100" width="8" height="11" />
+          <rect x="266" y="100" width="8" height="11" />
+          <rect x="-22" y="35" width="9" height="13" />
+          <rect x="148" y="35" width="9" height="13" />
+          <rect x="64" y="-10" width="9" height="13" />
         </g>
       </g>
+
       <rect x="0" y="210" width="1600" height="60" fill="url(#mistGrad2)" />
 
       <path
