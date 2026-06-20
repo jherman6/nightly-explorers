@@ -18,7 +18,7 @@ export default function ContactPage() {
           <h1 className="mx-auto mt-4 max-w-[640px] font-display text-[clamp(32px,5vw,52px)] font-semibold text-moonbeam">
             Get in Touch
           </h1>
-          <p className="mx-auto mt-4 max-w-[480px] text-[17px] text-moonbeam/78">
+          <p className="mx-auto mt-4 max-w-[480px] text-[17px] text-[rgba(242,232,201,0.78)]">
             Questions, partnership ideas, or just want to say hello? Send us
             a note below.
           </p>

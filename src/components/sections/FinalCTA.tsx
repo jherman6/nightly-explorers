@@ -18,13 +18,13 @@ export function FinalCTA() {
         <h2 className="font-display text-[clamp(30px,4.6vw,48px)] font-semibold text-moonbeam">
           Tonight&apos;s Adventure Starts Here.
         </h2>
-        <p className="mx-auto mt-[18px] mb-9 max-w-[480px] text-[17px] text-moonbeam/78">
+        <p className="mx-auto mt-[18px] mb-9 max-w-[480px] text-[17px] text-[rgba(242,232,201,0.78)]">
           Small moments. Strong character. Lifelong memories.
         </p>
 
         <WaitlistForm source="final-cta" className="mx-auto max-w-[480px]" />
 
-        <p className="mt-4 text-[13px] text-moonbeam/55">
+        <p className="mt-4 text-[13px] text-[rgba(242,232,201,0.55)]">
           Your first night&apos;s conversation, challenge, and story are
           already waiting.
         </p>

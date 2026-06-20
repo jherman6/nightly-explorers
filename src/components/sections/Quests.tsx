@@ -20,7 +20,7 @@ export function Quests() {
             {QUEST_TRAITS.map((trait) => (
               <div
                 key={trait.name}
-                className="group rounded-2xl border border-moonbeam/[0.14] bg-gradient-to-br from-moonbeam/[0.07] to-moonbeam/[0.02] px-3.5 py-[22px] text-center transition-all hover:-translate-y-1 hover:border-amber-light hover:bg-amber-glow/10"
+                className="group rounded-2xl border border-[rgba(242,232,201,0.14)] bg-gradient-to-br from-moonbeam/[0.07] to-moonbeam/[0.02] px-3.5 py-[22px] text-center transition-all hover:-translate-y-1 hover:border-amber-light hover:bg-[rgba(196,123,31,0.1)]"
               >
                 <div
                   className="mx-auto mb-3 flex h-[50px] w-[46px] items-center justify-center bg-gradient-to-br from-amber-light to-amber-glow text-[19px] shadow-[inset_0_2px_4px_rgba(255,255,255,0.35),0_6px_16px_-6px_rgba(0,0,0,0.5)]"
@@ -37,7 +37,7 @@ export function Quests() {
               </div>
             ))}
           </div>
-          <p className="mt-7 text-center text-[14px] font-semibold text-moonbeam/60">
+          <p className="mt-7 text-center text-[14px] font-semibold text-[rgba(242,232,201,0.6)]">
             …and 44 more quests across a full 52-week journey.
           </p>
         </Reveal>

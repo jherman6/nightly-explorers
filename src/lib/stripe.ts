@@ -14,7 +14,7 @@ export function getStripeClient(): Stripe | null {
   if (!key) return null;
 
   stripeClient = new Stripe(key, {
-apiVersion: "2025-02-24.acacia",
+    apiVersion: "2025-02-24.acacia",
   });
 
   return stripeClient;

@@ -18,14 +18,14 @@ export function Problem() {
             {PROBLEM_POINTS.map((point) => (
               <div
                 key={point.title}
-                className="flex items-start gap-4 rounded-brand border border-moonbeam/[0.12] bg-moonbeam/[0.05] p-[26px_24px]"
+                className="flex items-start gap-4 rounded-brand border border-[rgba(242,232,201,0.12)] bg-[rgba(242,232,201,0.05)] p-[26px_24px]"
               >
                 <div className="mt-0.5 text-[22px] leading-none">{point.icon}</div>
                 <div>
                   <h4 className="mb-1.5 font-display text-[17px] font-semibold text-moonbeam">
                     {point.title}
                   </h4>
-                  <p className="text-[14.5px] leading-relaxed text-moonbeam/68">
+                  <p className="text-[14.5px] leading-relaxed text-[rgba(242,232,201,0.68)]">
                     {point.description}
                   </p>
                 </div>

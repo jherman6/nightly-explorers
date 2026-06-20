@@ -7,9 +7,9 @@ const variantClasses: Record<Variant, string> = {
   primary:
     "bg-gradient-to-b from-amber-light to-amber-glow text-[#2a1604] shadow-[0_10px_30px_-8px_rgba(196,123,31,0.65)] hover:-translate-y-0.5 hover:shadow-[0_16px_34px_-8px_rgba(196,123,31,0.8)]",
   ghost:
-    "bg-moonbeam/5 text-moonbeam border border-moonbeam/35 hover:bg-moonbeam/10 hover:border-moonbeam/60",
+    "bg-[rgba(242,232,201,0.05)] text-moonbeam border border-[rgba(242,232,201,0.35)] hover:bg-[rgba(242,232,201,0.1)] hover:border-[rgba(242,232,201,0.6)]",
   "ghost-dark":
-    "bg-transparent text-forest-night border border-forest-night/30 hover:bg-forest-night/5",
+    "bg-transparent text-forest-night border border-[rgba(13,42,22,0.3)] hover:bg-[rgba(13,42,22,0.05)]",
 };
 
 const baseClasses =

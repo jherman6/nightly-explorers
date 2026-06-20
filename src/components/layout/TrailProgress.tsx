@@ -44,7 +44,7 @@ export function TrailProgress() {
   return (
     <div
       aria-hidden="true"
-      className={`fixed inset-x-0 top-[72px] z-[55] h-[34px] border-b border-moonbeam/10 bg-forest-deep/60 backdrop-blur-sm transition-opacity duration-300 pointer-events-none ${
+      className={`fixed inset-x-0 top-[72px] z-[55] h-[34px] border-b border-[rgba(242,232,201,0.1)] bg-[rgba(8,27,15,0.6)] backdrop-blur-sm transition-opacity duration-300 pointer-events-none ${
         visible ? "opacity-100" : "opacity-0"
       }`}
     >
@@ -52,7 +52,7 @@ export function TrailProgress() {
         ref={innerRef}
         className="relative mx-auto h-full w-full max-w-container px-6"
       >
-        <div className="absolute left-6 right-6 top-1/2 h-[2px] -translate-y-1/2 rounded-full bg-moonbeam/[0.18]" />
+        <div className="absolute left-6 right-6 top-1/2 h-[2px] -translate-y-1/2 rounded-full bg-[rgba(242,232,201,0.18)]" />
         <div
           className="absolute top-1/2 h-[2px] -translate-y-1/2 rounded-full bg-gradient-to-r from-amber-glow to-amber-light shadow-[0_0_10px_rgba(196,123,31,0.7)]"
           style={{
@@ -66,7 +66,7 @@ export function TrailProgress() {
             className={`absolute top-1/2 h-[7px] w-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full transition-colors ${
               dotPositions[i] !== undefined && dotPositions[i] <= progress
                 ? "bg-amber-light"
-                : "bg-moonbeam/45"
+                : "bg-[rgba(242,232,201,0.45)]"
             }`}
             style={{ left: `calc(24px + ${dotPositions[i] ?? 0}% * (100% - 48px) / 100%)` }}
           />

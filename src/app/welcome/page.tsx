@@ -22,7 +22,7 @@ export default function WelcomePage() {
         <h1 className="mt-4 font-display text-[clamp(30px,4.6vw,46px)] font-semibold text-moonbeam">
           Welcome to the Adventure. 🏮
         </h1>
-        <p className="mx-auto mt-[18px] max-w-[460px] text-[17px] leading-relaxed text-moonbeam/78">
+        <p className="mx-auto mt-[18px] max-w-[460px] text-[17px] leading-relaxed text-[rgba(242,232,201,0.78)]">
           Your first night&apos;s conversation, challenge, and story are on
           their way. Keep an eye on your inbox — the path to the castle
           starts soon.
@@ -30,7 +30,7 @@ export default function WelcomePage() {
 
         <Link
           href="/"
-          className="mt-9 inline-flex items-center justify-center gap-2.5 rounded-full border border-moonbeam/35 bg-moonbeam/5 px-7 py-3.5 text-[15.5px] font-bold text-moonbeam transition-all hover:bg-moonbeam/10 hover:border-moonbeam/60"
+          className="mt-9 inline-flex items-center justify-center gap-2.5 rounded-full border border-[rgba(242,232,201,0.35)] bg-[rgba(242,232,201,0.05)] px-7 py-3.5 text-[15.5px] font-bold text-moonbeam transition-all hover:bg-[rgba(242,232,201,0.1)] hover:border-[rgba(242,232,201,0.6)]"
         >
           Back to the beginning
         </Link>

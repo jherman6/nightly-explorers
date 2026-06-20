@@ -16,7 +16,7 @@ export function SectionHeading({
   align = "left",
 }: SectionHeadingProps) {
   const titleColor = tone === "dark" ? "text-moonbeam" : "text-forest-night";
-  const ledeColor = tone === "dark" ? "text-moonbeam/78" : "text-[#445848]";
+  const ledeColor = tone === "dark" ? "text-[rgba(242,232,201,0.78)]" : "text-[#445848]";
   const alignClass = align === "center" ? "text-center mx-auto" : "";
 
   return (

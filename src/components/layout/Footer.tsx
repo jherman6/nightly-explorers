@@ -3,7 +3,7 @@ import { FOOTER_LINKS, SITE } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="bg-[#04100a] py-9 text-center text-[13px] text-moonbeam/55">
+    <footer className="bg-[#04100a] py-9 text-center text-[13px] text-[rgba(242,232,201,0.55)]">
       <div className="mx-auto w-full max-w-container px-6">
         <div className="font-display text-base font-semibold text-moonbeam">
           {SITE.name}
@@ -17,7 +17,7 @@ export function Footer() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-moonbeam/70 transition-colors hover:text-moonbeam"
+              className="text-[rgba(242,232,201,0.7)] transition-colors hover:text-moonbeam"
             >
               {link.label}
             </Link>
@@ -30,7 +30,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="The Nightly Explorers on Instagram"
-            className="text-moonbeam/60 transition-colors hover:text-moonbeam"
+            className="text-[rgba(242,232,201,0.6)] transition-colors hover:text-moonbeam"
           >
             Instagram
           </a>
@@ -39,7 +39,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="The Nightly Explorers on Facebook"
-            className="text-moonbeam/60 transition-colors hover:text-moonbeam"
+            className="text-[rgba(242,232,201,0.6)] transition-colors hover:text-moonbeam"
           >
             Facebook
           </a>
@@ -48,7 +48,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="The Nightly Explorers on X"
-            className="text-moonbeam/60 transition-colors hover:text-moonbeam"
+            className="text-[rgba(242,232,201,0.6)] transition-colors hover:text-moonbeam"
           >
             X
           </a>

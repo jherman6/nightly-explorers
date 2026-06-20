@@ -19,7 +19,7 @@ export function Benefits() {
             {BENEFITS.map((benefit) => (
               <div
                 key={benefit.title}
-                className="flex items-start gap-4 rounded-brand border border-moonbeam/[0.12] bg-moonbeam/[0.05] p-[24px_22px] transition-all hover:-translate-y-[3px] hover:border-amber-glow/50 hover:bg-amber-glow/[0.08]"
+                className="flex items-start gap-4 rounded-brand border border-[rgba(242,232,201,0.12)] bg-[rgba(242,232,201,0.05)] p-[24px_22px] transition-all hover:-translate-y-[3px] hover:border-[rgba(196,123,31,0.5)] hover:bg-[rgba(196,123,31,0.08)]"
               >
                 <div className="mt-0.5 flex-shrink-0 text-[21px] leading-none">
                   {benefit.icon}
@@ -28,7 +28,7 @@ export function Benefits() {
                   <h5 className="mb-1.5 font-display text-[16.5px] font-semibold text-moonbeam">
                     {benefit.title}
                   </h5>
-                  <p className="text-[14px] leading-relaxed text-moonbeam/70">
+                  <p className="text-[14px] leading-relaxed text-[rgba(242,232,201,0.7)]">
                     {benefit.description}
                   </p>
                 </div>

@@ -45,7 +45,7 @@ export function ContactForm() {
     return (
       <div
         role="status"
-        className="rounded-brand border border-forest-night/10 bg-explorer-green/10 p-8 text-center"
+        className="rounded-brand border border-[rgba(13,42,22,0.1)] bg-[rgba(62,111,57,0.1)] p-8 text-center"
       >
         <p className="font-display text-xl font-semibold text-forest-night">
           Message sent — thank you.
@@ -70,7 +70,7 @@ export function ContactForm() {
           autoComplete="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full rounded-xl border border-forest-night/15 bg-white px-4 py-3 text-[15px] text-forest-night focus:border-amber-glow focus:outline-none"
+          className="w-full rounded-xl border border-[rgba(13,42,22,0.15)] bg-white px-4 py-3 text-[15px] text-forest-night focus:border-amber-glow focus:outline-none"
         />
       </div>
 
@@ -85,7 +85,7 @@ export function ContactForm() {
           autoComplete="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full rounded-xl border border-forest-night/15 bg-white px-4 py-3 text-[15px] text-forest-night focus:border-amber-glow focus:outline-none"
+          className="w-full rounded-xl border border-[rgba(13,42,22,0.15)] bg-white px-4 py-3 text-[15px] text-forest-night focus:border-amber-glow focus:outline-none"
         />
       </div>
 
@@ -99,7 +99,7 @@ export function ContactForm() {
           rows={5}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full rounded-xl border border-forest-night/15 bg-white px-4 py-3 text-[15px] text-forest-night focus:border-amber-glow focus:outline-none"
+          className="w-full rounded-xl border border-[rgba(13,42,22,0.15)] bg-white px-4 py-3 text-[15px] text-forest-night focus:border-amber-glow focus:outline-none"
         />
       </div>
 

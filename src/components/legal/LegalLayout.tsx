@@ -17,7 +17,7 @@ export function LegalLayout({
           <h1 className="mx-auto max-w-[640px] font-display text-[clamp(30px,4.6vw,46px)] font-semibold text-moonbeam">
             {title}
           </h1>
-          <p className="mt-3 text-[14px] text-moonbeam/55">
+          <p className="mt-3 text-[14px] text-[rgba(242,232,201,0.55)]">
             Last updated: {lastUpdated}
           </p>
         </div>

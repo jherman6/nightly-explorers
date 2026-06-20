@@ -69,7 +69,7 @@ export function WaitlistForm({
           placeholder="First name"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
-          className="flex-1 basis-[160px] rounded-full border border-moonbeam/30 bg-moonbeam/[0.08] px-[18px] py-[15px] text-[15px] text-moonbeam placeholder:text-moonbeam/50 focus:border-amber-light focus:outline-none"
+          className="flex-1 basis-[160px] rounded-full border border-[rgba(242,232,201,0.3)] bg-[rgba(242,232,201,0.08)] px-[18px] py-[15px] text-[15px] text-moonbeam placeholder:text-[rgba(242,232,201,0.5)] focus:border-amber-light focus:outline-none"
         />
 
         <label className="sr-only" htmlFor={`${source}-email`}>
@@ -83,7 +83,7 @@ export function WaitlistForm({
           placeholder="Your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-[2] basis-[230px] rounded-full border border-moonbeam/30 bg-moonbeam/[0.08] px-[18px] py-[15px] text-[15px] text-moonbeam placeholder:text-moonbeam/50 focus:border-amber-light focus:outline-none"
+          className="flex-[2] basis-[230px] rounded-full border border-[rgba(242,232,201,0.3)] bg-[rgba(242,232,201,0.08)] px-[18px] py-[15px] text-[15px] text-moonbeam placeholder:text-[rgba(242,232,201,0.5)] focus:border-amber-light focus:outline-none"
         />
 
         <button

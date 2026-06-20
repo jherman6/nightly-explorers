@@ -18,7 +18,7 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-[60] transition-colors duration-300 ${
         scrolled
-          ? "bg-forest-deep/85 backdrop-blur-md shadow-[0_10px_30px_-16px_rgba(0,0,0,0.5)]"
+          ? "bg-[rgba(8,27,15,0.85)] backdrop-blur-md shadow-[0_10px_30px_-16px_rgba(0,0,0,0.5)]"
           : "bg-transparent"
       }`}
     >
@@ -47,7 +47,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[14.5px] font-bold text-moonbeam/82 transition-colors hover:text-moonbeam"
+              className="text-[14.5px] font-bold text-[rgba(242,232,201,0.82)] transition-colors hover:text-moonbeam"
             >
               {link.label}
             </Link>
@@ -56,14 +56,14 @@ export function Header() {
 
         <Link
           href="/#final"
-          className="hidden items-center justify-center gap-2.5 rounded-full border border-moonbeam/35 bg-moonbeam/5 px-7 py-3.5 text-[15.5px] font-bold text-moonbeam transition-all hover:bg-moonbeam/10 hover:border-moonbeam/60 md:inline-flex"
+          className="hidden items-center justify-center gap-2.5 rounded-full border border-[rgba(242,232,201,0.35)] bg-[rgba(242,232,201,0.05)] px-7 py-3.5 text-[15.5px] font-bold text-moonbeam transition-all hover:bg-[rgba(242,232,201,0.1)] hover:border-[rgba(242,232,201,0.6)] md:inline-flex"
         >
           Begin the Adventure
         </Link>
 
         <Link
           href="/#final"
-          className="inline-flex items-center rounded-full border border-moonbeam/40 px-4 py-2.5 text-[13.5px] font-bold text-moonbeam md:hidden"
+          className="inline-flex items-center rounded-full border border-[rgba(242,232,201,0.4)] px-4 py-2.5 text-[13.5px] font-bold text-moonbeam md:hidden"
         >
           Begin
         </Link>
