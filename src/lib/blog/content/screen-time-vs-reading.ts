@@ -20,6 +20,7 @@ export const screenTimeVsReadingContent: ContentBlock[] = [
     type: "p",
     text: "Many children's shows are edited with frequent scene changes, quick cuts, and constant motion, because rapid change is highly effective at capturing a young child's attention. Some studies, including research associated with psychologist Dimitri Christakis, have explored whether very fast-paced programming is associated with shorter attention spans later on. This research area is genuinely debated — other researchers point out that content and context matter as much as pace, and that correlation in these studies doesn't prove the screen time *caused* the attention differences. The fair summary is: pacing probably matters, but it's one variable among many, not a guaranteed outcome.",
   },
+  { type: "divider", icon: "🌿" },
   { type: "h2", id: "language-development", text: "Language Development: Why Back-and-Forth Beats One-Way Input" },
   { type: "h3", id: "the-video-deficit", text: "The Video Deficit in Very Young Children" },
   {
@@ -30,10 +31,20 @@ export const screenTimeVsReadingContent: ContentBlock[] = [
     type: "p",
     text: "This is the main reason most pediatric guidance, including general recommendations from groups like the American Academy of Pediatrics, suggests minimal to no screen time for children under 18–24 months (outside of video-calling family), and emphasizes high-quality, co-viewed content for preschoolers rather than a hard ban.",
   },
+  {
+    type: "pullquote",
+    text: "A toddler can watch the same action on a screen and on a lap and learn almost nothing from one of them — not because the picture is different, but because only one of them can look back.",
+  },
   { type: "h3", id: "when-screens-can-help", text: "When Screens Can Support Language (and When They Can't)" },
   {
     type: "p",
     text: "The video deficit isn't a life sentence against screens — it's strongest in passive, solo viewing of very young children. Research on **joint media engagement** — watching together and talking about what's happening — finds that co-viewing with a parent who narrates, asks questions, and connects the content to real life can meaningfully close that gap. A show watched alone and a show watched with a parent who pauses to ask \"what do you think she's going to do?\" are, developmentally speaking, not the same activity at all.",
+  },
+  {
+    type: "callout",
+    variant: "research",
+    label: "🔬 What the Research Shows",
+    text: "Co-viewing with a parent who narrates and asks questions measurably narrows the video-deficit gap seen in solo, passive screen time — the difference isn't really the screen, it's whether someone is engaging alongside it.",
   },
   { type: "h2", id: "imagination-and-symbolic-play", text: "Imagination and Symbolic Play" },
   {
@@ -45,10 +56,17 @@ export const screenTimeVsReadingContent: ContentBlock[] = [
     type: "p",
     text: "Many parents notice their child seems more dysregulated — more prone to meltdowns or trouble winding down — after extended screen time, sometimes called \"screen hangover\" colloquially, though the formal research here is still developing and mixed. A reasonable, non-alarmist read of the evidence: fast-paced, highly stimulating content can leave some children overstimulated and under-practiced at self-soothing, simply because the screen was doing the emotional heavy lifting (excitement, suspense, resolution) that a child would otherwise have had to manage internally. Slower-paced content, or content followed by calm wind-down time, tends to be less of an issue.",
   },
+  { type: "divider", icon: "🧭" },
   { type: "h2", id: "sleep-quality", text: "Sleep Quality and Evening Screens" },
   {
     type: "p",
     text: "This is one area where the evidence is fairly consistent: light exposure in the evening, including the light from screens, can suppress melatonin production and delay the body's natural signal that it's time to sleep. Combine that with stimulating content right before bed, and evening screen time is a fairly well-supported reason for delayed or lower-quality sleep in children (and adults). This is part of why a wind-down routine built around a physical book and a quiet conversation, rather than a tablet, tends to support easier bedtimes — not because the story is inherently superior, but because it doesn't fight against the body's sleep signals.",
+  },
+  {
+    type: "callout",
+    variant: "parent-tip",
+    label: "💡 Parent Tip",
+    text: "Swap the last screen of the day for a five-minute conversation about something that happened today. It works with your child's sleep biology instead of against it.",
   },
   { type: "h2", id: "parent-child-bonding", text: "Parent-Child Bonding: What Co-Viewing Changes" },
   {
@@ -64,6 +82,7 @@ export const screenTimeVsReadingContent: ContentBlock[] = [
     type: "p",
     text: "The most defensible conclusion isn't \"screens cause harm\" or \"screens are fine\" — it's that **what fills a child's time matters**, and time spent on responsive, language-rich, relationally warm activities (which reading and conversation reliably are, and which screen time only sometimes is) tends to predict better outcomes. That's a reason to prioritize those activities, not a reason to panic about the days they don't happen.",
   },
+  { type: "divider", icon: "✦" },
   { type: "h2", id: "practical-recommendations", text: "So What Should Parents Actually Do?" },
   {
     type: "ul",
@@ -74,6 +93,12 @@ export const screenTimeVsReadingContent: ContentBlock[] = [
       "Keep the **hour before bed** screen-light. A book and a short conversation work with your child's sleep biology instead of against it.",
       "Don't aim for zero. Aim for **balance and presence** — the research supports a varied evening, not a screen-free purity test.",
     ],
+  },
+  {
+    type: "callout",
+    variant: "family-activity",
+    label: "🧭 Family Activity",
+    text: "Pick one show your child already loves and watch five minutes of it together this week — pause once to ask what they think happens next.",
   },
   {
     type: "p",

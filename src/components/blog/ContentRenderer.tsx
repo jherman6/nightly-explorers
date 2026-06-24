@@ -73,12 +73,31 @@ export function ContentRenderer({ blocks }: { blocks: ContentBlock[] }) {
                 {block.cite ? <footer className="mt-1 text-sm not-italic text-[#445848]">— {block.cite}</footer> : null}
               </blockquote>
             );
-          case "callout":
+          case "pullquote":
             return (
-              <div key={key} className="callout">
+              <div key={key} className="pullquote">
+                <span aria-hidden="true" className="pullquote-mark">&ldquo;</span>
+                <p>{renderInline(block.text, key)}</p>
+                <div className="pullquote-rule" />
+              </div>
+            );
+          case "divider":
+            return (
+              <div key={key} aria-hidden="true" className="chapter-divider">
+                <span className="chapter-divider-line" />
+                <span className="chapter-divider-icon">{block.icon ?? "🌿"}</span>
+                <span className="chapter-divider-line chapter-divider-line-right" />
+              </div>
+            );
+          case "callout": {
+            const variantClass = block.variant ? `callout-${block.variant}` : "";
+            return (
+              <div key={key} className={`callout ${variantClass}`.trim()}>
+                {block.label ? <div className="callout-label">{block.label}</div> : null}
                 {renderInline(block.text, key)}
               </div>
             );
+          }
           default:
             return null;
         }

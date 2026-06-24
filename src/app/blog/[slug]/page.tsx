@@ -6,9 +6,24 @@ import { AuthorBio } from "@/components/blog/AuthorBio";
 import { ContentRenderer } from "@/components/blog/ContentRenderer";
 import { FaqSection } from "@/components/blog/FaqSection";
 import { RelatedArticles } from "@/components/blog/RelatedArticles";
+import { ArticleSidebarLeft } from "@/components/blog/article/ArticleSidebarLeft";
+import { ArticleSidebarRight } from "@/components/blog/article/ArticleSidebarRight";
+import { Breadcrumb } from "@/components/blog/article/Breadcrumb";
+import { MobileProgressBar } from "@/components/blog/article/MobileProgressBar";
+import { TocAccordion } from "@/components/blog/article/TocAccordion";
 import { Treeline } from "@/components/ui/Treeline";
-import { categoryToSlug, getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/blog/posts";
+import { getTraitsByNames } from "@/lib/constants";
+import {
+  categoryToSlug,
+  getAllPosts,
+  getPostBySlug,
+  getRelatedPosts,
+  getTocItems,
+  splitLede,
+} from "@/lib/blog/posts";
 import { buildMetadata } from "@/lib/seo";
+
+const ARTICLE_ELEMENT_ID = "article-main";
 
 interface PostPageProps {
   params: Promise<{ slug: string }>;
@@ -36,13 +51,24 @@ export default async function BlogPostPage({ params }: PostPageProps) {
   if (!post) notFound();
 
   const relatedPosts = getRelatedPosts(post);
+  const tocItems = getTocItems(post.content);
+  const headingIds = tocItems.map((item) => item.id);
+  const sidebarTraits = getTraitsByNames(post.characterTraits ?? []);
+  const primaryCategory = post.categories[0] ?? "Blog";
+  const { lede, rest } = splitLede(post.content);
 
   return (
     <>
       <ArticleJsonLd post={post} />
+      <MobileProgressBar articleElementId={ARTICLE_ELEMENT_ID} headingIds={headingIds} />
 
-      <section className="relative bg-forest-night py-[120px]">
-        <div className="mx-auto w-full max-w-[760px] px-6 text-center">
+      <Breadcrumb category={primaryCategory} title={post.title} />
+
+      <section
+        className="relative pb-14 pt-7 text-center"
+        style={{ background: "linear-gradient(180deg, #0D2A16 0%, #081B0F 100%)" }}
+      >
+        <div className="mx-auto w-full max-w-[760px] px-6">
           <div className="mb-4 flex flex-wrap justify-center gap-2">
             {post.categories.map((category) => (
               <Link
@@ -73,24 +99,65 @@ export default async function BlogPostPage({ params }: PostPageProps) {
         </div>
       </section>
 
-      <section className="relative bg-moonbeam py-[80px]">
+      <section className="relative bg-moonbeam pb-24">
         <Treeline fill="#F2E8C9" />
-        <div className="mx-auto w-full max-w-[680px] px-6">
-          <ContentRenderer blocks={post.content} />
-          <FaqSection faqs={post.faqs} />
 
-          <AuthorBio author={post.author} />
+        <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 gap-0 px-6 pt-10 md:grid-cols-[minmax(0,1fr)_300px] md:items-start md:gap-11 md:pt-12 min-[1180px]:grid-cols-[260px_minmax(0,760px)_300px] min-[1180px]:justify-center min-[1180px]:gap-12">
+          <ArticleSidebarLeft
+            articleElementId={ARTICLE_ELEMENT_ID}
+            tocItems={tocItems}
+            readingTime={post.readingTime}
+            category={primaryCategory}
+            traits={sidebarTraits}
+          />
 
-          <RelatedArticles posts={relatedPosts} />
+          <main id={ARTICLE_ELEMENT_ID} className="min-w-0">
+            <TocAccordion tocItems={tocItems} />
 
-          <div className="mt-12 text-center">
-            <Link
-              href="/blog"
-              className="text-[14px] font-bold text-river-blue underline underline-offset-2"
-            >
-              ← Back to all articles
-            </Link>
-          </div>
+            {lede.map((block, i) =>
+              block.type === "p" ? (
+                <p
+                  key={`lede-${i}`}
+                  className={`text-[18.5px] leading-[1.7] text-[#3a4a3d] ${i > 0 ? "mt-[18px]" : ""}`}
+                >
+                  {block.text}
+                </p>
+              ) : null
+            )}
+
+            <ContentRenderer blocks={rest} />
+            <FaqSection faqs={post.faqs} />
+
+            <AuthorBio author={post.author} />
+
+            <RelatedArticles posts={relatedPosts} />
+
+            <p className="mt-[18px] text-[12.5px] font-bold text-[rgba(13,42,22,0.45)]">
+              Published{" "}
+              {new Date(post.publishedAt).toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}{" "}
+              · Last updated{" "}
+              {new Date(post.updatedAt).toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </p>
+
+            <div className="mt-9">
+              <Link
+                href="/blog"
+                className="text-[14px] font-bold text-river-blue underline underline-offset-2"
+              >
+                ← Back to all articles
+              </Link>
+            </div>
+          </main>
+
+          <ArticleSidebarRight relatedPosts={relatedPosts} questChipTraits={sidebarTraits} />
         </div>
       </section>
     </>

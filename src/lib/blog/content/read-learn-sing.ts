@@ -18,6 +18,7 @@ export const readLearnSingContent: ContentBlock[] = [
     type: "p",
     text: "That's a key reason combining the three is more powerful than doing any one in isolation. A story gives you new vocabulary and ideas to talk about. Conversation turns that vocabulary into something the child can actually use and reason with. Music adds rhythm and repetition that helps all of it stick in memory — and wraps the whole experience in a feeling of warmth that makes a child want to come back to it tomorrow night.",
   },
+  { type: "divider", icon: "🌿" },
   { type: "h2", id: "how-reading-builds-language-and-connection", text: "How Reading Builds Language and Connection" },
   { type: "h3", id: "vocabulary-and-the-word-gap", text: "Vocabulary and the Word Gap" },
   {
@@ -28,6 +29,10 @@ export const readLearnSingContent: ContentBlock[] = [
     type: "p",
     text: "Books are an unusually efficient source of this kind of rich language. Even simple picture books use words and sentence structures that rarely come up in everyday conversation (\"burrow,\" \"enormous,\" \"reluctantly\"). Hearing those words in context, again and again across repeated readings, is how a child's vocabulary expands well beyond what daily life alone would offer.",
   },
+  {
+    type: "pullquote",
+    text: "Even simple picture books use words that rarely come up in everyday conversation — hearing them again and again is how a child's vocabulary expands well beyond daily life alone.",
+  },
   { type: "h3", id: "dialogic-reading", text: "Dialogic Reading: Why How You Read Matters as Much as What You Read" },
   {
     type: "p",
@@ -37,6 +42,13 @@ export const readLearnSingContent: ContentBlock[] = [
     type: "p",
     text: "In practice, this is simply asking your child what they think will happen next, or what a character might be feeling — and then building on whatever they say. It turns story time from a one-way performance into a two-way conversation, which is exactly the kind of responsive interaction that the research consistently points to as the real engine of early language growth.",
   },
+  {
+    type: "callout",
+    variant: "research",
+    label: "🔬 What the Research Shows",
+    text: "Children whose caregivers used dialogic reading techniques showed measurably stronger vocabulary and comprehension gains than children who experienced traditional, non-interactive read-alouds — even when read the very same books.",
+  },
+  { type: "divider", icon: "🧭" },
   { type: "h2", id: "how-conversation-deepens-emotional-development", text: "How Conversation Deepens Emotional Development" },
   { type: "h3", id: "naming-emotions", text: "Naming Emotions Builds Emotional Intelligence" },
   {
@@ -47,11 +59,18 @@ export const readLearnSingContent: ContentBlock[] = [
     type: "p",
     text: "This is one of the most practical reasons to build a dinner conversation or after-story chat into the evening: it's a low-pressure, recurring opportunity to ask \"how did that make you feel?\" or \"what would you do if that happened to you?\" Over weeks and months, those small conversations build a vocabulary for emotional life the same way storybooks build a vocabulary for the world.",
   },
+  {
+    type: "callout",
+    variant: "parent-tip",
+    label: "💡 Parent Tip",
+    text: "Tonight, try asking: \"What was one moment today that made you feel really happy — and one that was hard?\" Let the answer sit without rushing to fix it.",
+  },
   { type: "h3", id: "dinner-table-talk", text: "Dinner-Table Talk and Long-Term Outcomes" },
   {
     type: "p",
     text: "Family-meal research has repeatedly found associations between regular family dinners and a range of positive outcomes in children and teens, including stronger vocabulary, better academic performance, and lower rates of risky behavior in adolescence. Researchers generally agree the meal itself isn't magic — it's the conversation that tends to happen around it. A predictable, unhurried moment where a child has a parent's full attention is rare in most households, and it appears to matter quite a bit.",
   },
+  { type: "divider", icon: "✦" },
   { type: "h2", id: "how-music-supports-memory-and-language", text: "How Music Supports Memory and Language" },
   { type: "h3", id: "rhythm-repetition-and-the-developing-brain", text: "Rhythm, Repetition, and the Developing Brain" },
   {
@@ -61,6 +80,12 @@ export const readLearnSingContent: ContentBlock[] = [
   {
     type: "p",
     text: "Repetition itself is also one of the most reliable tools the brain uses to move information from short-term to long-term memory in early childhood. A song you sing every night becomes a scaffold a child's memory can hang new words and ideas on — which is part of why a familiar lullaby can calm a child far faster than a new one.",
+  },
+  {
+    type: "callout",
+    variant: "family-activity",
+    label: "🧭 Family Activity",
+    text: "Pick one simple song to sing together every night this week — the same one. By night five, notice how much faster your child settles when it starts.",
   },
   { type: "h3", id: "music-as-a-bonding-ritual", text: "Music as a Bonding Ritual" },
   {

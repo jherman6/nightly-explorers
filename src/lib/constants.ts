@@ -110,6 +110,16 @@ export const QUEST_TRAITS: QuestTrait[] = [
   { icon: "⭐", name: "Confidence" },
 ];
 
+/** Resolve a list of trait names (e.g. a post's `characterTraits`) to their
+ * icon + name pairs from the single QUEST_TRAITS source of truth. Unknown
+ * names are silently skipped rather than throwing, since this only feeds
+ * decorative sidebar badges. */
+export function getTraitsByNames(names: string[]): QuestTrait[] {
+  return names
+    .map((name) => QUEST_TRAITS.find((trait) => trait.name === name))
+    .filter((trait): trait is QuestTrait => Boolean(trait));
+}
+
 export const SAMPLE_ADVENTURE: AdventurePage[] = [
   {
     icon: "💬",

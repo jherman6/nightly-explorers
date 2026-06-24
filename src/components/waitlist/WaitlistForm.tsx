@@ -7,6 +7,10 @@ interface WaitlistFormProps {
   source: string;
   className?: string;
   buttonLabel?: string;
+  /** "row" (default) wraps inputs side-by-side, matching the existing
+   * homepage CTA. "stacked" lays inputs out vertically — used in the
+   * narrow blog sidebar newsletter card. */
+  layout?: "row" | "stacked";
 }
 
 type Status = "idle" | "submitting" | "error";
@@ -15,6 +19,7 @@ export function WaitlistForm({
   source,
   className = "",
   buttonLabel = "Join the Adventure",
+  layout = "row",
 }: WaitlistFormProps) {
   const router = useRouter();
   const [firstName, setFirstName] = useState("");
@@ -57,7 +62,13 @@ export function WaitlistForm({
 
   return (
     <form onSubmit={handleSubmit} className={className} noValidate>
-      <div className="flex flex-wrap justify-center gap-3">
+      <div
+        className={
+          layout === "stacked"
+            ? "flex flex-col gap-3"
+            : "flex flex-wrap justify-center gap-3"
+        }
+      >
         <label className="sr-only" htmlFor={`${source}-firstName`}>
           First name
         </label>
@@ -69,7 +80,9 @@ export function WaitlistForm({
           placeholder="First name"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
-          className="flex-1 basis-[160px] rounded-full border border-[rgba(242,232,201,0.3)] bg-[rgba(242,232,201,0.08)] px-[18px] py-[15px] text-[15px] text-moonbeam placeholder:text-[rgba(242,232,201,0.5)] focus:border-amber-light focus:outline-none"
+          className={`rounded-full border border-[rgba(242,232,201,0.3)] bg-[rgba(242,232,201,0.08)] px-[18px] py-[15px] text-[15px] text-moonbeam placeholder:text-[rgba(242,232,201,0.5)] focus:border-amber-light focus:outline-none ${
+            layout === "stacked" ? "w-full" : "flex-1 basis-[160px]"
+          }`}
         />
 
         <label className="sr-only" htmlFor={`${source}-email`}>
@@ -83,13 +96,17 @@ export function WaitlistForm({
           placeholder="Your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-[2] basis-[230px] rounded-full border border-[rgba(242,232,201,0.3)] bg-[rgba(242,232,201,0.08)] px-[18px] py-[15px] text-[15px] text-moonbeam placeholder:text-[rgba(242,232,201,0.5)] focus:border-amber-light focus:outline-none"
+          className={`rounded-full border border-[rgba(242,232,201,0.3)] bg-[rgba(242,232,201,0.08)] px-[18px] py-[15px] text-[15px] text-moonbeam placeholder:text-[rgba(242,232,201,0.5)] focus:border-amber-light focus:outline-none ${
+            layout === "stacked" ? "w-full" : "flex-[2] basis-[230px]"
+          }`}
         />
 
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-b from-amber-light to-amber-glow px-7 py-3.5 text-[15.5px] font-bold text-[#2a1604] shadow-[0_10px_30px_-8px_rgba(196,123,31,0.65)] transition-all hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
+          className={`inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-b from-amber-light to-amber-glow px-7 py-3.5 text-[15.5px] font-bold text-[#2a1604] shadow-[0_10px_30px_-8px_rgba(196,123,31,0.65)] transition-all hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 ${
+            layout === "stacked" ? "w-full" : ""
+          }`}
         >
           {status === "submitting" ? "Joining…" : buttonLabel}
         </button>
