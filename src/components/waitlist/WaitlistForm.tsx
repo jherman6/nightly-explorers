@@ -13,7 +13,7 @@ interface WaitlistFormProps {
   layout?: "row" | "stacked";
 }
 
-type Status = "idle" | "submitting" | "error";
+type Status = "idle" | "submitting" | "error" | "duplicate";
 
 export function WaitlistForm({
   source,
@@ -44,6 +44,12 @@ export function WaitlistForm({
       if (!response.ok) {
         setStatus("error");
         setErrorMessage(data?.error || "Something went wrong. Please try again.");
+        return;
+      }
+
+      if (data.duplicate) {
+        setStatus("duplicate");
+        setErrorMessage(data?.message || "You're already on the list — we'll see you soon!");
         return;
       }
 
@@ -117,6 +123,9 @@ export function WaitlistForm({
           <p role="alert" className="text-[13.5px] font-semibold text-amber-light">
             {errorMessage}
           </p>
+        ) : null}
+        {status === "duplicate" && errorMessage ? (
+          <p className="text-[13.5px] font-semibold text-moonbeam">{errorMessage}</p>
         ) : null}
       </div>
     </form>
